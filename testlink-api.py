@@ -25,18 +25,24 @@ class TestlinkApi(object):
     url = None
     test_status = {
         'failed':'f',
+        'passed':'p',
         # TODO: Completar la lista
     }
 
     project_plan = None
     test_plan_id = None
     build_id = None
+    test_cases = {}
 
+    setted_up = False
 
-    def __init__(self, host : str, key : str):
+    def __init__(self, host : str==None, key : str==None):
         self.set_host(host)
         self.set_key(key)
-        self.connect()
+        try:
+            self.connect()
+        except NoConnectionDataException:
+            pass
 
     def set_host(self, host : str):
         self.hostname = host
@@ -49,6 +55,20 @@ class TestlinkApi(object):
             raise NoConnectionDataException()
         
         self.api = testlink.TestlinkAPICliente(self.host, self.api_key)
+        self.setted_up = True
+
+    def is_setted_up(self):
+        return self.setted_up == True
+
+    ####
+
+    def set_relation_test_case_name(self, testlink_test_case, test_name):
+        self.test_cases[test_name] = testlink_test_case
+
+    def get_testlink_test_case_from_test_name(self, test_name):
+        return self.test_cases.get(test_name)
+
+    ###
 
     def set_project_plan(self, project_plan_name : str):
         self.project_plan = project_plan_name
@@ -91,6 +111,8 @@ class TestlinkApi(object):
             raise NoTestPlanDefinedException()
 
         test_plan_data = self.api.getTestPlanByName(self.project_plan, self.test_plan)
+
+    ### 
 
     def get_test_cases(self, status : str = None):
         if status != None and status not in self.test_status:
