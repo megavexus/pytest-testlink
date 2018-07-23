@@ -1,0 +1,12 @@
+[testlink]
+url = testlink.mydomain.com
+api-key = XXXXXXX
+
+[testlink:project]
+test-project-name = XXXXX
+test-plan = YYYY
+build = ZZZZ
+
+[testlink:test-cases]
+TP-38 = test_asdfg
+...
