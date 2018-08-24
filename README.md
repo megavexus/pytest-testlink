@@ -4,6 +4,8 @@ This plugin will set a Testlink controler with a config file (throw a warning if
 # Configuration
 TODO
 
+# Use
+
 # Running
 
 
