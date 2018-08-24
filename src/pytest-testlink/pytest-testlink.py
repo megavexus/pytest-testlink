@@ -1,4 +1,4 @@
-from testlink-api import TestLinkApi
+from testlink_sdk.testlink-api import TestLinkApi
 import configparse
 import os
 

@@ -8,5 +8,6 @@ test-plan = YYYY
 build = ZZZZ
 
 [testlink:test-cases]
-TP-38 = test_asdfg
-...
+test_prueba_1 = TP-38
+test_prueba_1 = TP-38
+

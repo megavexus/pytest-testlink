@@ -9,6 +9,11 @@ TODO
 
 ## Todo
 - [ ] Test the Testlink API
+- [ ] Make the plugin:
+    - Load config from config file
+    - Create new build with test cases of test project
+    - Link the tests with the testlink testcases
+    - Mark the tests as failed or succeed with custom message
 - [ ] Test the plugin:
     - [ ] With connection
     - [ ] Without connection
