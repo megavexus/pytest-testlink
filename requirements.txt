@@ -1,2 +1,2 @@
 TestLink-API-Python-client==0.8.0
-configparse>=3.5.0
+#configparse>=3.5.0

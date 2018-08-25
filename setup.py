@@ -30,6 +30,6 @@ setup(
     data_files=[('requs', glob('*.txt'))],
 
     # Testing
-    setup_requires=["pytest-runner"],
-    tests_require=REQUIREMENTS_TEST,
+    #setup_requires=["pytest-runner"],
+    #tests_require=REQUIREMENTS_TEST,
 )

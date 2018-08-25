@@ -1,6 +1,6 @@
 [testlink]
 url = testlink.mydomain.com
-api-key = XXXXXXX
+api-key = 6ab3b3626acf9b99z334f3749a779999
 
 [testlink:project]
 test-project-name = XXXXX
@@ -9,5 +9,5 @@ build = ZZZZ
 
 [testlink:test-cases]
 test_prueba_1 = TP-38
-test_prueba_1 = TP-38
+test_prueba_2 = TP-39
 
